@@ -2,6 +2,8 @@
 
 A community-driven recipe-sharing platform built with Next.js. Connect with food lovers, share your favorite dishes, and discover new culinary inspirations!  
 
+<img width="2868" height="1635" alt="image" src="https://github.com/quintonmills/NextLevel-Food/blob/main/assets/NLF-logo.png" />
+
 
 ## ✨ Features  
 - **Add & Share Recipes** – Upload your recipes with images, ingredients, and steps.  
