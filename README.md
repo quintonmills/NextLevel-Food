@@ -4,6 +4,7 @@ A community-driven recipe-sharing platform built with Next.js. Connect with food
 
 <img width="2868" height="1635" alt="image" src="https://github.com/quintonmills/NextLevel-Food/blob/main/assets/NLF-logo.png" />
 
+[nextlevel-food.com](next-level-food-rho.vercel.app)
 
 ## ✨ Features  
 - **Add & Share Recipes** – Upload your recipes with images, ingredients, and steps.  
@@ -15,7 +16,7 @@ A community-driven recipe-sharing platform built with Next.js. Connect with food
 ## 🛠 Tech Stack  
 - **Frontend:** Next.js (React), CSS  
 - **Backend:**  Node.js + SQLite
-- **Deployment:** AWS
+- **Deployment:** Vercel
 - **Additional Tools:** NextAuth.js (auth), AWS S3 (image storage)  
 
 ## 🚀 Getting Started  
