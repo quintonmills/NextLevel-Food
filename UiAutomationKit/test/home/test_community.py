@@ -1,8 +1,10 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from pages.home.community_page import CommunityPage
+import unittest
 
-class TestCommunityPage():
+class TestCommunityPage(unittest.TestCase):
     """Test suite for the Community Recipes page functionality."""
 
     def test_browse_community_recipes_happy_path(self):
@@ -13,18 +15,6 @@ class TestCommunityPage():
         driver.get(baseURL)
         driver.implicitly_wait(30)
 
-        browseMeals = driver.find_element(By.XPATH, "/html/body/header[1]/nav/ul/li[1]/a")
-        browseMeals.click()
-
-        mealsButton = driver.find_element(By.XPATH, "/html/body/p[2]/a")
-        if mealsButton is not None:
-            time.sleep(3)
-            print('navigation successful')
-            
-        else:
-            print('navigation not successful')
-
-ff = TestCommunityPage()
-ff.test_browse_community_recipes_happy_path()
-
-
+        communityPage = CommunityPage(driver)
+        communityPage.navigate_to_community_recipes()
+        
