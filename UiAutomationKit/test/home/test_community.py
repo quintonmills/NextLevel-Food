@@ -1,8 +1,8 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from pages.home.community_page import CommunityPage
 import unittest
+from pages.home.community_page import CommunityPage
 
 class TestCommunityPage(unittest.TestCase):
     """Test suite for the Community Recipes page functionality."""

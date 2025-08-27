@@ -1,7 +1,9 @@
 from selenium.webdriver.common.by import By
+from base.selenium_driver import SeleniumDriver
 
-class CommunityPage():
+class CommunityPage(SeleniumDriver):
     def __init__(self, driver):
+        super().__init__(driver)
         self.driver = driver
     
     #locators
@@ -11,7 +13,8 @@ class CommunityPage():
         return self.driver.find_element(By.XPATH, self.browse_meals_link)
     
     def click_browse_meals_link(self):
-        self.get_browse_meals_link().click()
+        # self.get_browse_meals_link().click()
+        self.elementClick(self.browse_meals_link, locatorType="XPATH")
 
     def  navigate_to_community_recipes(self):
         self.click_browse_meals_link()
