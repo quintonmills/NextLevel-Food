@@ -1,6 +1,4 @@
-import time
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 import unittest
 from pages.home.community_page import CommunityPage
 
@@ -17,4 +15,8 @@ class TestCommunityPage(unittest.TestCase):
 
         communityPage = CommunityPage(driver)
         communityPage.navigate_to_community_recipes()
+        result = communityPage.verify_user_can_view_recipes_on_community_page()
+
+        assert result == True
+        driver.quit()
         
