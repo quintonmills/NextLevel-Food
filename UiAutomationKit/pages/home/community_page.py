@@ -19,4 +19,10 @@ class CommunityPage(SeleniumDriver):
     def  navigate_to_community_recipes(self):
         self.click_browse_meals_link()
 
+    def verify_user_can_view_recipes_on_community_page(self):
+        result = self.isElementPresent("/html/body/p[2]/a", locatorType="xpath")
+        return result
+    
+    # def verify_user_can_not_view_recipes_on_community_page(self):
+
         
