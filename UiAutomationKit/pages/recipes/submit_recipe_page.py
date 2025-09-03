@@ -33,6 +33,22 @@ class RecipePage(SeleniumDriver):
         self.sendKeys(instructions, self.instructions_field, locatorType="XPATH")
     def click_submit_link(self):
         self.elementClick(self.share_button, locatorType="XPATH")
+
+    def share_recipe(self, name, email, title, summary, instructions):
+        """
+        Complete recipe sharing workflow in one method
+        
+        Args:
+            name: User's name
+            email: User's email
+            title: Recipe title
+            summary: Recipe summary
+            instructions: Recipe instructions
+        """
+        self.navigate_to_share_recipes_screen()
+        self.enter_credentials(name, email)
+        self.enter_recipe_details(title, summary, instructions)
+        self.click_submit()
     # def upload_recipe_image(self, image_file_path):
     #      """
     #     Uploads an image by sending the file path directly to the input element.
